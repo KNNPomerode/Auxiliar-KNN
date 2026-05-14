@@ -63,6 +63,16 @@ export default function Content() {
               <p className="text-slate-600 leading-relaxed text-sm md:text-base">
                 {section.instruction}
               </p>
+              {section.type === 'listening' && (
+                <a
+                  href="https://portal.knnidiomas.com.br/pedagogico/list"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 bg-white border-2 border-[#6B21A8] text-[#6B21A8] font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:bg-purple-50 transition-colors"
+                >
+                  🎧 ACESSAR PORTAL DO ALUNO
+                </a>
+              )}
             </div>
           ))}
 

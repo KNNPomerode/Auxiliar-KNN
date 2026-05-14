@@ -15,6 +15,7 @@ export interface ContentSection {
   title: string
   icon: string
   instruction: string
+  type?: 'listening'
 }
 
 export interface UnitContent {
@@ -89,6 +90,34 @@ export const unitContent: Record<string, UnitContent> = {
         title: 'Live the Road, Love the Journey',
         icon: '🛣️',
         instruction: 'Conferir com o teacher o que precisa ser preparado para esta seção.',
+      },
+    ],
+  },
+  'en-book-1-8': {
+    sections: [
+      {
+        title: 'Easy to Understand',
+        icon: '💡',
+        instruction: 'Traduzir as frases.',
+      },
+      {
+        title: 'Straight to the Point',
+        icon: '🎯',
+        instruction:
+          'Traduzir as palavras em laranja usando o glossário e responder as perguntas em inglês.',
+      },
+      {
+        title: 'Listening Comprehension',
+        icon: '🎧',
+        type: 'listening',
+        instruction:
+          'Utilizar o portal do aluno para escutar as frases e escrevê-las no livro.',
+      },
+      {
+        title: 'Asking Questions',
+        icon: '❓',
+        instruction:
+          'Não é necessária nenhuma preparação obrigatória. Caso queira, leia as perguntas e busque compreendê-las, uma vez que tudo que está ali já foi apresentado.',
       },
     ],
   },
