@@ -141,14 +141,24 @@ export default function Content() {
                   {activity.instrucao}
                 </p>
                 {activity.portal && (
-                  <a
-                    href={PORTAL_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 bg-[#6B21A8] text-white font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:bg-purple-800 transition-colors"
-                  >
-                    🎧 ACESSAR PORTAL DO ALUNO
-                  </a>
+                  <>
+                    <a
+                      href={PORTAL_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 bg-[#6B21A8] text-white font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:bg-purple-800 transition-colors"
+                    >
+                      🎧 ACESSAR PORTAL DO ALUNO
+                    </a>
+                    <div className="mt-4 bg-amber-400/20 border border-amber-400/50 rounded-xl p-4 flex items-start gap-3">
+                      <span className="text-xl select-none leading-none mt-0.5">🌍</span>
+                      <p className="text-amber-900 text-sm leading-relaxed">
+                        <span className="font-black">Preparar a aula sem o listening comprehension te prepara para falar com o teacher, </span>
+                        preparar a aula com o listening comprehension{' '}
+                        <span className="font-black">te prepara para falar com o mundo!!</span>
+                      </p>
+                    </div>
+                  </>
                 )}
               </div>
             )
