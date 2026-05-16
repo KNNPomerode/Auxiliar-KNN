@@ -172,12 +172,12 @@ export default function Content() {
           </div>
         </div>
       ) : (
-        <div className="bg-white/15 backdrop-blur-sm border border-white/20 rounded-2xl p-12 text-center">
-          <p className="text-5xl mb-4 select-none">🚧</p>
-          <p className="text-white font-black text-xl uppercase tracking-wide">Conteúdo em breve</p>
-          <p className="text-white/60 mt-3 text-sm max-w-xs mx-auto leading-relaxed">
-            Esta unidade ainda não foi preparada. Em breve você poderá acessar as instruções aqui.
-          </p>
+        <div className="flex justify-center items-center py-8">
+          <img
+            src={`${import.meta.env.BASE_URL}em-construcao.png`}
+            alt="Em construção"
+            className="w-full max-w-sm md:max-w-md"
+          />
         </div>
       )}
     </Layout>

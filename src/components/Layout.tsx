@@ -88,6 +88,10 @@ export default function Layout({ children }: LayoutProps) {
       <div className="max-w-3xl mx-auto px-4 pt-20 pb-14">
         {children}
       </div>
+
+      <p className="fixed bottom-3 right-4 z-10 text-white/40 text-xs select-none pointer-events-none">
+        made by Victor Missfeld
+      </p>
     </div>
   )
 }
