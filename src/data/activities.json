@@ -1,0 +1,136 @@
+{
+  "WB": {
+    "nome": "Word Bank",
+    "instrucao": "Traduzir as expressões usando o glossário encontrado ao final do livro, caso alguma palavra não esteja no glossário da unidade, é possível que esta já tenha sido apresentada anteriormente."
+  },
+  "STTP": {
+    "nome": "Straight to the Point",
+    "instrucao": "Traduzir as palavras em laranja utilizando o glossário e responder as perguntas em inglês."
+  },
+  "ETU": {
+    "nome": "Easy to Understand",
+    "instrucao": "Traduzir as expressões, as palavras em negrito estarão no glossário e as demais já terão sido ensinadas em unidades passadas."
+  },
+  "LTR": {
+    "nome": "Live the Road, Love the Journey",
+    "instrucao": "Conferir com o professor a maneira de preparar a atividade."
+  },
+  "LC1": {
+    "nome": "Listening Comprehension",
+    "instrucao": "Utilizar o portal do aluno para escutar as frases e escrevê-las no livro.",
+    "portal": true
+  },
+  "LC2": {
+    "nome": "Listening Comprehension",
+    "instrucao": "Utilizar o portal do aluno para ouvir as perguntas e marcar a resposta correta no livro.",
+    "portal": true
+  },
+  "LC3": {
+    "nome": "Listening Comprehension",
+    "instrucao": "Utilizar o portal do aluno para ouvir o texto e completar a frase.",
+    "portal": true
+  },
+  "LC4": {
+    "nome": "Listening Comprehension",
+    "instrucao": "Utilizar o portal do aluno para ouvir o texto e completar com verdadeiro ou falso.",
+    "portal": true
+  },
+  "LC5": {
+    "nome": "Listening Comprehension",
+    "instrucao": "Utilizar o portal do aluno para ouvir o texto e responder as perguntas.",
+    "portal": true
+  },
+  "LS": {
+    "nome": "Listening Section",
+    "instrucao": "Utilizar o portal do aluno para ouvir o áudio que ajudará a contextualizar o texto.",
+    "portal": true
+  },
+  "AQ": {
+    "nome": "Asking Questions",
+    "instrucao": "Não é necessária nenhuma preparação obrigatória, caso queira, leia as perguntas e busque compreendê-las, uma vez que tudo que está ali já foi apresentado."
+  },
+  "LR": {
+    "nome": "Let's Remember",
+    "instrucao": "Traduzir os verbos que foram apresentados nas cinco unidades passadas e responder as perguntas em inglês."
+  },
+  "RP": {
+    "nome": "Role-Playing",
+    "instrucao": "Conferir com o professor a maneira de preparar a unidade."
+  },
+  "ITTT": {
+    "nome": "It's Time to Talk",
+    "instrucao": "Responder as perguntas em inglês."
+  },
+  "TS": {
+    "nome": "Talk Show",
+    "instrucao": "Traduzir as palavras em laranja utilizando o glossário e conferir se as demais palavras, já apresentadas em outras unidades, estão claras."
+  },
+  "EYK": {
+    "nome": "Enrich Your Knowledge",
+    "instrucao": "Escrever definição ou sinônimo da palavra destacada em inglês."
+  },
+  "CR": {
+    "nome": "Chat Room",
+    "instrucao": "Traduzir as palavras e expressões em negrito e ler o texto para conferir se compreendeu tudo, procurando qualquer outra palavra que não tenha sido entendida."
+  },
+  "RU": {
+    "nome": "Read Up!",
+    "instrucao": "Traduzir as palavras e expressões em negrito e ler o texto para conferir se compreendeu tudo, procurando qualquer outra palavra que não tenha sido entendida."
+  },
+  "FTU": {
+    "nome": "Figure This Out",
+    "instrucao": "Traduzir as palavras em laranja utilizando o glossário e conferir se as demais palavras, já apresentadas em outras unidades, estão claras."
+  },
+  "SUTG": {
+    "nome": "Step Up the Game",
+    "instrucao": "Ler a explicação gramatical, tentar entender e fazer um exemplo de frase no ponto gramatical."
+  },
+  "ISES": {
+    "nome": "In Someone Else's Shoes",
+    "instrucao": "Ler as situações e conferir se as compreendeu."
+  },
+  "IMU": {
+    "nome": "It's a Matter of Understanding",
+    "instrucao": "Ler o texto e buscar qualquer palavra que não tenha compreendido, de preferência em um dicionário confiável como o Cambridge."
+  },
+  "RND": {
+    "nome": "Reach New Depths",
+    "instrucao": "Definir ou dar sinônimos das palavras em laranja, de preferência usar um dicionário confiável como o Cambridge."
+  },
+  "GIRTT": {
+    "nome": "Get It Right This Time",
+    "instrucao": "Ler e conferir compreensão do que é dito, fazendo um exemplo de cada caso para ajudar na diferenciação."
+  },
+  "OR": {
+    "nome": "Oof! Really?",
+    "instrucao": "Ler e conferir compreensão."
+  },
+  "HTI": {
+    "nome": "Hmm, That's Interesting...",
+    "instrucao": "Ler o texto e buscar qualquer palavra que não tenha compreendido, de preferência em um dicionário confiável como o Cambridge."
+  },
+  "CAI": {
+    "nome": "Comprehension and Interpretation",
+    "instrucao": "Ler as perguntas e buscar entendê-las."
+  },
+  "KG": {
+    "nome": "Keep Going",
+    "instrucao": "Ler as perguntas e buscar entendê-las."
+  },
+  "ITC": {
+    "nome": "In That Case...",
+    "instrucao": "Ler as frases e buscar compreendê-las."
+  },
+  "WATS": {
+    "nome": "What Are They Saying?",
+    "instrucao": "Conferir com o professor a maneira de preparar a atividade."
+  },
+  "R": {
+    "nome": "Revision",
+    "instrucao": "Ler e buscar compreender os exemplos e preparar um exemplo sobre o ponto gramatical."
+  },
+  "LTR2": {
+    "nome": "Live the Road, Love the Journey",
+    "instrucao": "Ler o texto e buscar qualquer palavra que não tenha compreendido, de preferência em um dicionário confiável como o Cambridge."
+  }
+}

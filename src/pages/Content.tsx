@@ -1,7 +1,73 @@
 import { useParams } from 'react-router-dom'
 import Layout from '../components/Layout'
 import Breadcrumb from '../components/Breadcrumb'
-import { languages, unitContent } from '../data/data'
+import { languages } from '../data/data'
+import activitiesData from '../data/activities.json'
+import unitsData from '../data/units.json'
+
+const PORTAL_URL = 'https://portal.knnidiomas.com.br/pedagogico/list'
+
+const activityIcons: Record<string, string> = {
+  WB: '📖',
+  STTP: '🎯',
+  ETU: '💡',
+  LTR: '🛣️',
+  LTR2: '🛣️',
+  LC1: '🎧',
+  LC2: '🎧',
+  LC3: '🎧',
+  LC4: '🎧',
+  LC5: '🎧',
+  LS: '🎧',
+  AQ: '❓',
+  LR: '🔁',
+  RP: '🎭',
+  ITTT: '💬',
+  TS: '📺',
+  EYK: '⭐',
+  CR: '💬',
+  RU: '📚',
+  FTU: '🔍',
+  SUTG: '⬆️',
+  ISES: '👟',
+  IMU: '🤔',
+  RND: '🌊',
+  GIRTT: '✅',
+  OR: '😮',
+  HTI: '💭',
+  CAI: '🔎',
+  KG: '▶️',
+  ITC: '💭',
+  WATS: '🗣️',
+  R: '📝',
+}
+
+const langMap: Record<string, string> = { en: 'ingles' }
+
+interface ActivityDef {
+  nome: string
+  instrucao: string
+  portal?: boolean
+}
+
+interface UnitData {
+  atividades: string[]
+  obs?: string
+}
+
+type UnitsJson = Record<string, Record<string, Record<string, Record<string, UnitData>>>>
+
+function getUnitData(lang: string, collection: string, bookNum: number, unitNum: number): UnitData | null {
+  const langKey = langMap[lang]
+  if (!langKey) return null
+
+  const data = unitsData as UnitsJson
+  const collectionData = data[langKey]?.[collection]
+  if (!collectionData) return null
+
+  const bookKey = `${collection}${bookNum}`
+  return collectionData[bookKey]?.[`unit${unitNum}`] ?? null
+}
 
 export default function Content() {
   const { lang, collection, book, unit } = useParams<{
@@ -24,8 +90,8 @@ export default function Content() {
     )
   }
 
-  const contentKey = `${lang}-${collection}-${bookNum}-${unitNum}`
-  const content = unitContent[contentKey]
+  const unitData = getUnitData(lang!, collection!, bookNum, unitNum)
+  const activities = activitiesData as Record<string, ActivityDef>
 
   return (
     <Layout>
@@ -33,7 +99,7 @@ export default function Content() {
         { label: 'Início', href: '/' },
         { label: language.name, href: `/${lang}` },
         { label: col.name, href: `/${lang}/${collection}` },
-        { label: `Book ${bookNum}`, href: `/${lang}/${collection}/${book}` },
+        { label: `${col.name} ${bookNum}`, href: `/${lang}/${collection}/${book}` },
         { label: `Unidade ${unitNum}` },
       ]} />
 
@@ -47,36 +113,47 @@ export default function Content() {
         <p className="text-white/60 mt-1 font-medium">O que preparar antes da aula</p>
       </div>
 
-      {content ? (
+      {unitData ? (
         <div className="space-y-4">
-          {content.sections.map((section, i) => (
-            <div
-              key={i}
-              className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-md"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl leading-none select-none">{section.icon}</span>
-                <h2 className="font-black text-[#6B21A8] text-base md:text-lg uppercase tracking-wide">
-                  {section.title}
-                </h2>
-              </div>
-              <p className="text-slate-600 leading-relaxed text-sm md:text-base">
-                {section.instruction}
+          {unitData.obs && (
+            <div className="bg-yellow-300/20 backdrop-blur-sm border border-yellow-300/40 rounded-2xl p-5 flex items-start gap-3">
+              <span className="text-xl select-none">📌</span>
+              <p className="text-white text-sm leading-relaxed">
+                <span className="font-bold">Observação:</span> {unitData.obs}
               </p>
-              {section.type === 'listening' && (
-                <a
-                  href="https://portal.knnidiomas.com.br/pedagogico/list"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 bg-white border-2 border-[#6B21A8] text-[#6B21A8] font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:bg-purple-50 transition-colors"
-                >
-                  🎧 ACESSAR PORTAL DO ALUNO
-                </a>
-              )}
             </div>
-          ))}
+          )}
 
-          {/* Dica de rodapé */}
+          {unitData.atividades.map((code, i) => {
+            const normalizedCode = code === 'LC' ? 'LC1' : code
+            const activity = activities[normalizedCode]
+            if (!activity) return null
+            const icon = activityIcons[normalizedCode] ?? '📄'
+            return (
+              <div key={i} className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-md">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl leading-none select-none">{icon}</span>
+                  <h2 className="font-black text-[#6B21A8] text-base md:text-lg uppercase tracking-wide">
+                    {activity.nome}
+                  </h2>
+                </div>
+                <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                  {activity.instrucao}
+                </p>
+                {activity.portal && (
+                  <a
+                    href={PORTAL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 bg-[#6B21A8] text-white font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:bg-purple-800 transition-colors"
+                  >
+                    🎧 ACESSAR PORTAL DO ALUNO
+                  </a>
+                )}
+              </div>
+            )
+          })}
+
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5 flex items-start gap-3 mt-2">
             <span className="text-xl select-none">💬</span>
             <p className="text-white/80 text-sm leading-relaxed">
