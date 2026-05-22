@@ -12,7 +12,7 @@ export default function Units() {
 
   if (!language || !col || isNaN(bookNum)) {
     return (
-      <Layout>
+      <Layout backTo="/">
         <p className="text-white text-center mt-20 font-bold">Livro não encontrado.</p>
       </Layout>
     )
@@ -21,7 +21,7 @@ export default function Units() {
   const units = Array.from({ length: UNITS_PER_BOOK }, (_, i) => i + 1)
 
   return (
-    <Layout>
+    <Layout backTo={`/${lang}/${collection}`}>
       <Breadcrumb items={[
         { label: 'Início', href: '/' },
         { label: language.name, href: `/${lang}` },

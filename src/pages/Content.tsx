@@ -84,7 +84,7 @@ export default function Content() {
 
   if (!language || !col || isNaN(bookNum) || isNaN(unitNum)) {
     return (
-      <Layout>
+      <Layout backTo="/">
         <p className="text-white text-center mt-20 font-bold">Unidade não encontrada.</p>
       </Layout>
     )
@@ -94,7 +94,7 @@ export default function Content() {
   const activities = activitiesData as Record<string, ActivityDef>
 
   return (
-    <Layout>
+    <Layout backTo={`/${lang}/${collection}/${book}`}>
       <Breadcrumb items={[
         { label: 'Início', href: '/' },
         { label: language.name, href: `/${lang}` },

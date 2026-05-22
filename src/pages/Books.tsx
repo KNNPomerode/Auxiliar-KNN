@@ -11,7 +11,7 @@ export default function Books() {
 
   if (!language || !col) {
     return (
-      <Layout>
+      <Layout backTo="/">
         <p className="text-white text-center mt-20 font-bold">Coleção não encontrada.</p>
       </Layout>
     )
@@ -20,7 +20,7 @@ export default function Books() {
   const books = Array.from({ length: col.bookCount }, (_, i) => i + 1)
 
   return (
-    <Layout>
+    <Layout backTo={`/${lang}`}>
       <Breadcrumb items={[
         { label: 'Início', href: '/' },
         { label: language.name, href: `/${lang}` },

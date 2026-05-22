@@ -1,8 +1,10 @@
 import { ReactNode, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import BackButton from './BackButton'
 
 interface LayoutProps {
   children: ReactNode
+  backTo?: string
 }
 
 interface BeforeInstallPromptEvent extends Event {
@@ -10,7 +12,7 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children, backTo }: LayoutProps) {
   const [installPrompt, setInstallPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [showIOSInstructions, setShowIOSInstructions] = useState(false)
 
@@ -42,18 +44,22 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#6B21A8] to-[#EC4899]">
-      <Link
-        to="/"
-        className="fixed top-5 left-5 z-20 leading-none group"
-        aria-label="KNN Idiomas — Início"
-      >
-        <p className="text-white font-black text-sm tracking-[0.2em] uppercase leading-none group-hover:opacity-80 transition-opacity">
-          KNN
-        </p>
-        <p className="text-white/70 font-medium text-[10px] tracking-[0.25em] uppercase leading-none mt-0.5 group-hover:opacity-80 transition-opacity">
-          IDIOMAS
-        </p>
-      </Link>
+      {backTo ? (
+        <BackButton to={backTo} />
+      ) : (
+        <Link
+          to="/"
+          className="fixed top-5 left-5 z-20 leading-none group"
+          aria-label="KNN Idiomas — Início"
+        >
+          <p className="text-white font-black text-sm tracking-[0.2em] uppercase leading-none group-hover:opacity-80 transition-opacity">
+            KNN
+          </p>
+          <p className="text-white/70 font-medium text-[10px] tracking-[0.25em] uppercase leading-none mt-0.5 group-hover:opacity-80 transition-opacity">
+            IDIOMAS
+          </p>
+        </Link>
+      )}
 
       {showInstallButton && (
         <div className="fixed top-4 right-4 z-20">
@@ -85,7 +91,7 @@ export default function Layout({ children }: LayoutProps) {
         </div>
       )}
 
-      <div className="max-w-3xl mx-auto px-4 pt-20 pb-14">
+      <div className={`max-w-3xl mx-auto px-4 pb-14 ${backTo ? 'pt-24' : 'pt-20'}`}>
         {children}
       </div>
 

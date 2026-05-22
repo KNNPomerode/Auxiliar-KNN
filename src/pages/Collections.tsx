@@ -10,14 +10,14 @@ export default function Collections() {
 
   if (!language) {
     return (
-      <Layout>
+      <Layout backTo="/">
         <p className="text-white text-center mt-20 font-bold">Idioma não encontrado.</p>
       </Layout>
     )
   }
 
   return (
-    <Layout>
+    <Layout backTo="/">
       <Breadcrumb items={[
         { label: 'Início', href: '/' },
         { label: language.name },
