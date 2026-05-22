@@ -67,7 +67,7 @@
   },
   "EYK": {
     "nome": "Enrich Your Knowledge",
-    "instrucao": "Escrever definição ou sinônimo da palavra destacada em inglês."
+    "instrucao": "Escrever definição ou sinônimo da palavra destacada em inglês, tente usar suas próprias palavras, pois isto desenvolverá sua capacidade no idioma."
   },
   "CR": {
     "nome": "Chat Room",
@@ -132,5 +132,46 @@
   "LTR2": {
     "nome": "Live the Road, Love the Journey",
     "instrucao": "Ler o texto e buscar qualquer palavra que não tenha compreendido, de preferência em um dicionário confiável como o Cambridge."
+  },
+  "GP": {
+    "nome": "Grammar Point",
+    "instrucao": "Ler a explicação gramatical, tentar entender e fazer um exemplo de frase no ponto gramatical, se houver uma palavra em laranja, escreva sinônimo ou definição, tente usar suas próprias palavras, pois isto desenvolverá sua capacidade no idioma."
+  },
+  "SYM": {
+    "nome": "Speak Your Mind!",
+    "instrucao": "Ler o texto e buscar compreendê-lo."
+  },
+  "ITFD": {
+    "nome": "It's Time for a Debate!",
+    "instrucao": "Ler os pontos positivos e negativos e buscar compreendê-los, perguntar ao teacher como trabalhar as palavras e expressões em laranja."
+  },
+  "CE": {
+    "nome": "Common Errors",
+    "instrucao": "Encontrar o erro e reescrever a frase corretamente.",
+    "alerta": "Evite usar o ChatGPT neste exercício — pode ser frustrante, mas errando você irá aprender!"
+  },
+  "HWU": {
+    "nome": "Hey, What's Up?",
+    "instrucao": "Ler o texto e buscar compreendê-lo, escrever sinônimo ou definição das palavras em laranja, tente usar suas próprias palavras, pois isto desenvolverá sua capacidade no idioma."
+  },
+  "MMB": {
+    "nome": "Mind My Business",
+    "instrucao": "Ler o texto e buscar compreendê-lo, escrever sinônimo ou definição das palavras em laranja, tente usar suas próprias palavras, pois isto desenvolverá sua capacidade no idioma."
+  },
+  "DYK": {
+    "nome": "Did You Know?",
+    "instrucao": "Ler a explicação gramatical, tentar entender e fazer um exemplo de frase no ponto gramatical, se houver uma palavra em laranja, escreva sinônimo ou definição, tente usar suas próprias palavras, pois isto desenvolverá sua capacidade no idioma."
+  },
+  "LTR3": {
+    "nome": "Live the Road, Love the Journey",
+    "instrucao": "Ler o texto e buscar compreendê-lo, escrever sinônimo ou definição das palavras em laranja, tente usar suas próprias palavras, pois isto desenvolverá sua capacidade no idioma."
+  },
+  "MTIMTE": {
+    "nome": "More Than It Meets the Eye",
+    "instrucao": "Ler o texto e buscar compreendê-lo, escrever sinônimo ou definição das palavras em laranja, tente usar suas próprias palavras, pois isto desenvolverá sua capacidade no idioma."
+  },
+  "IMO": {
+    "nome": "In My Opinion",
+    "instrucao": "Ler as 3 situações e preparar sua opinião sobre cada uma delas."
   }
 }

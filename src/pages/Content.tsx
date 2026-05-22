@@ -13,6 +13,7 @@ const activityIcons: Record<string, string> = {
   ETU: '💡',
   LTR: '🛣️',
   LTR2: '🛣️',
+  LTR3: '🛣️',
   LC1: '🎧',
   LC2: '🎧',
   LC3: '🎧',
@@ -40,6 +41,15 @@ const activityIcons: Record<string, string> = {
   ITC: '💭',
   WATS: '🗣️',
   R: '📝',
+  GP: '📐',
+  SYM: '🗯️',
+  ITFD: '⚖️',
+  CE: '⚠️',
+  HWU: '👋',
+  MMB: '💼',
+  DYK: '🧐',
+  MTIMTE: '👁️',
+  IMO: '🙋',
 }
 
 const langMap: Record<string, string> = { en: 'ingles' }
@@ -48,6 +58,7 @@ interface ActivityDef {
   nome: string
   instrucao: string
   portal?: boolean
+  alerta?: string
 }
 
 interface UnitData {
@@ -159,6 +170,14 @@ export default function Content() {
                       </p>
                     </div>
                   </>
+                )}
+                {activity.alerta && (
+                  <div className="mt-4 bg-red-500/15 border-2 border-red-500/60 rounded-xl p-4 flex items-start gap-3">
+                    <span className="text-2xl select-none leading-none mt-0.5">🚫</span>
+                    <p className="text-red-800 text-sm md:text-base leading-relaxed font-semibold">
+                      {activity.alerta}
+                    </p>
+                  </div>
                 )}
               </div>
             )
