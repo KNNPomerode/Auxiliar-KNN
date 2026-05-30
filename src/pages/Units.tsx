@@ -18,7 +18,8 @@ export default function Units() {
     )
   }
 
-  const units = Array.from({ length: UNITS_PER_BOOK }, (_, i) => i + 1)
+  const unitsPerBook = col.unitsPerBook ?? UNITS_PER_BOOK
+  const units = Array.from({ length: unitsPerBook }, (_, i) => i + 1)
 
   return (
     <Layout backTo={`/${lang}/${collection}`}>

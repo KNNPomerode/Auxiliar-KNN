@@ -50,6 +50,19 @@ const activityIcons: Record<string, string> = {
   DYK: '🧐',
   MTIMTE: '👁️',
   IMO: '🙋',
+  EX: '✏️',
+  WIYN: '🔤',
+  IAT: '🖼️',
+  LCO: '🔡',
+  LT: '🗣️',
+  LREDT: '🔁',
+  DLW: '📝',
+  PTLLTP: '🎲',
+  ST: '📕',
+  CET: '🧪',
+  FC: '👨‍👩‍👧‍👦',
+  LW: '✍️',
+  ITCYWS: '✨',
 }
 
 const langMap: Record<string, string> = { en: 'ingles' }
@@ -58,7 +71,11 @@ interface ActivityDef {
   nome: string
   instrucao: string
   portal?: boolean
+  listening?: boolean
   alerta?: string
+  link?: string
+  linkLabel?: string
+  whatsapp?: string
 }
 
 interface UnitData {
@@ -103,6 +120,7 @@ export default function Content() {
 
   const unitData = getUnitData(lang!, collection!, bookNum, unitNum)
   const activities = activitiesData as Record<string, ActivityDef>
+  const isKids = collection === 'kids'
 
   return (
     <Layout backTo={`/${lang}/${collection}/${book}`}>
@@ -142,6 +160,12 @@ export default function Content() {
             const icon = activityIcons[normalizedCode] ?? '📄'
             return (
               <div key={i} className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-md">
+                {isKids && (
+                  <div className="inline-flex items-center gap-1.5 bg-pink-100 text-[#EC4899] font-black text-xs uppercase tracking-wider px-3 py-1.5 rounded-full mb-3">
+                    <span className="select-none leading-none">👨‍👩‍👧‍👦</span>
+                    Mensagem para a família
+                  </div>
+                )}
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl leading-none select-none">{icon}</span>
                   <h2 className="font-black text-[#6B21A8] text-base md:text-lg uppercase tracking-wide">
@@ -152,24 +176,44 @@ export default function Content() {
                   {activity.instrucao}
                 </p>
                 {activity.portal && (
-                  <>
-                    <a
-                      href={PORTAL_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-2 bg-[#6B21A8] text-white font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:bg-purple-800 transition-colors"
-                    >
-                      🎧 ACESSAR PORTAL DO ALUNO
-                    </a>
-                    <div className="mt-4 bg-amber-400/20 border border-amber-400/50 rounded-xl p-4 flex items-start gap-3">
-                      <span className="text-xl select-none leading-none mt-0.5">🌍</span>
-                      <p className="text-amber-900 text-sm leading-relaxed">
-                        <span className="font-black">Preparar a aula sem o listening comprehension te prepara para falar com o teacher, </span>
-                        preparar a aula com o listening comprehension{' '}
-                        <span className="font-black">te prepara para falar com o mundo!!</span>
-                      </p>
-                    </div>
-                  </>
+                  <a
+                    href={PORTAL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 bg-[#6B21A8] text-white font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:bg-purple-800 transition-colors"
+                  >
+                    🎧 ACESSAR PORTAL DO ALUNO
+                  </a>
+                )}
+                {activity.link && (
+                  <a
+                    href={activity.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 bg-[#EC4899] text-white font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:bg-pink-600 transition-colors"
+                  >
+                    🎵 {activity.linkLabel ?? 'Abrir link'}
+                  </a>
+                )}
+                {activity.whatsapp && (
+                  <a
+                    href={`https://wa.me/${activity.whatsapp.replace(/\D/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 bg-[#25D366] text-white font-black text-sm uppercase tracking-wider px-5 py-3 rounded-xl shadow-sm hover:brightness-95 transition-all"
+                  >
+                    💬 Falar com a coordenação
+                  </a>
+                )}
+                {activity.listening && (
+                  <div className="mt-4 bg-amber-400/20 border border-amber-400/50 rounded-xl p-4 flex items-start gap-3">
+                    <span className="text-xl select-none leading-none mt-0.5">🌍</span>
+                    <p className="text-amber-900 text-sm leading-relaxed">
+                      <span className="font-black">Preparar a aula sem o listening comprehension te prepara para falar com o teacher, </span>
+                      preparar a aula com o listening comprehension{' '}
+                      <span className="font-black">te prepara para falar com o mundo!!</span>
+                    </p>
+                  </div>
                 )}
                 {activity.alerta && (
                   <div className="mt-4 bg-red-500/15 border-2 border-red-500/60 rounded-xl p-4 flex items-start gap-3">

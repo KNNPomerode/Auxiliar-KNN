@@ -9,6 +9,8 @@ export interface Collection {
   id: string
   name: string
   bookCount: number
+  /** Unidades por livro nesta coleção. Default: UNITS_PER_BOOK (30). */
+  unitsPerBook?: number
 }
 
 export const languages: Language[] = [
@@ -18,7 +20,7 @@ export const languages: Language[] = [
     flag: '🇺🇸',
     collections: [
       { id: 'kinder',       name: 'Kinder',       bookCount: 4 },
-      { id: 'kids',         name: 'Kids',          bookCount: 4 },
+      { id: 'kids',         name: 'Kids',          bookCount: 5, unitsPerBook: 27 },
       { id: 'tweens',       name: 'Tweens',        bookCount: 4 },
       { id: 'teens',        name: 'Teens',         bookCount: 6 },
       { id: 'book',         name: 'Book',          bookCount: 4 },

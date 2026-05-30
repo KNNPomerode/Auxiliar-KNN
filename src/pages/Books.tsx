@@ -53,7 +53,7 @@ export default function Books() {
               {n}
             </span>
             <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">
-              Book {n}
+              {col.name} {n}
             </span>
           </button>
         ))}

@@ -18,32 +18,38 @@
   "LC1": {
     "nome": "Listening Comprehension",
     "instrucao": "Utilizar o portal do aluno para escutar as frases e escrevê-las no livro.",
-    "portal": true
+    "portal": true,
+    "listening": true
   },
   "LC2": {
     "nome": "Listening Comprehension",
     "instrucao": "Utilizar o portal do aluno para ouvir as perguntas e marcar a resposta correta no livro.",
-    "portal": true
+    "portal": true,
+    "listening": true
   },
   "LC3": {
     "nome": "Listening Comprehension",
     "instrucao": "Utilizar o portal do aluno para ouvir o texto e completar a frase.",
-    "portal": true
+    "portal": true,
+    "listening": true
   },
   "LC4": {
     "nome": "Listening Comprehension",
     "instrucao": "Utilizar o portal do aluno para ouvir o texto e completar com verdadeiro ou falso.",
-    "portal": true
+    "portal": true,
+    "listening": true
   },
   "LC5": {
     "nome": "Listening Comprehension",
     "instrucao": "Utilizar o portal do aluno para ouvir o texto e responder as perguntas.",
-    "portal": true
+    "portal": true,
+    "listening": true
   },
   "LS": {
     "nome": "Listening Section",
     "instrucao": "Utilizar o portal do aluno para ouvir o áudio que ajudará a contextualizar o texto.",
-    "portal": true
+    "portal": true,
+    "listening": true
   },
   "AQ": {
     "nome": "Asking Questions",
@@ -173,5 +179,61 @@
   "IMO": {
     "nome": "In My Opinion",
     "instrucao": "Ler as 3 situações e preparar sua opinião sobre cada uma delas."
+  },
+  "EX": {
+    "nome": "Exercise",
+    "instrucao": "Dear family! O exercise é o momento em que as crianças praticam de forma escrita o que aprenderam na aula. Cada exercise tem exercícios diferentes e geralmente é feito em sala. Às vezes, é enviado como tarefa. Caso tenham dúvida de como acompanhar seu filho(a) em casa, podem seguir estas instruções: Passo 1 - enviar um \"oi\" para o número +55 47 9703-6696. Passo 2 - selecionar opção 3 - coordenação. Passo 3 - enviar sua dúvida.",
+    "whatsapp": "+5547970366696"
+  },
+  "WIYN": {
+    "nome": "What Is Your Name?",
+    "instrucao": "Dear family! Nesta primeira página conhecemos as letras do alfabeto em inglês e praticamos a escrita do nome. Para acompanhar em casa, podem pedir ao seu/sua filho(a) para cantar a música do alfabeto!",
+    "link": "https://youtu.be/ccEpTTZW34g?si=gp1xOH0YtyV_Cy4m",
+    "linkLabel": "Música do Alfabeto"
+  },
+  "IAT": {
+    "nome": "Introdução ao Tema",
+    "instrucao": "Dear family! Esta página tem as imagens referentes às palavras que aprendemos nesta unidade. Para acompanhar seu/sua filho(a) em casa, você pode falar alguma das palavras do dia e pedir para seu filho(a) apontar qual é a imagem correta."
+  },
+  "LCO": {
+    "nome": "Let's Complete",
+    "instrucao": "Dear family! Nesta parte, completamos as letras que estão faltando nas palavras, copiando as letras da palavra acima. Para acompanhar em casa, podem incentivar seu filho(a) a soletrar as letras de cada palavra."
+  },
+  "LT": {
+    "nome": "Let's Talk",
+    "instrucao": "Dear family! Esta parte é um momento de conversação em sala, em que a turma aprende a formar frases e a perguntar para os colegas. Para acompanhar em casa, caso seu filho(a) não tenha conseguido terminar em sala, podem traduzir as palavras e frases com ajuda do Glossary que está nas páginas finais do livro. Também podem pedir para ler novamente os exemplos do livro."
+  },
+  "LREDT": {
+    "nome": "Let's Remember e Dictation Time",
+    "instrucao": "Dear family! Nesta página, pedimos para a turma repetir os nomes das imagens e, depois que o teacher fala 4 frases, a turma circula as imagens faladas. Para acompanhar em casa, podem pedir para os alunos repetirem novamente as palavras da página."
+  },
+  "DLW": {
+    "nome": "Dictation/Let's Write",
+    "instrucao": "Dear family! Nesta parte, a turma escreve o nome das imagens circuladas na página anterior. Para acompanhar em casa, podem pedir para seu filho(a) tentar fazer uma frase com as palavras escritas."
+  },
+  "PTLLTP": {
+    "nome": "Play to Learn, Learn to Play",
+    "instrucao": "Dear family! Nesta parte, a turma faz um jogo em sala para praticar o que já aprenderam até agora."
+  },
+  "ST": {
+    "nome": "Story Time",
+    "instrucao": "Dear family! Nesta página, identificamos as imagens que temos, teacher lê a história e a turma circula as imagens corretas. Para acompanhar em casa, podem pedir para seu filho(a) dizer o nome das imagens circuladas."
+  },
+  "CET": {
+    "nome": "Crazy Experiment Time",
+    "instrucao": "Dear family! Nesta parte, a turma faz em sala o experimento mostrado no livro. Para acompanhar em casa, podem perguntar como foi o experimento ou fazer um teste em família!"
+  },
+  "FC": {
+    "nome": "Family Challenge",
+    "instrucao": "Dear family! Esta é uma parte do Exercise que é iniciado em sala, mas que é finalizado em casa junto com a família. Tirem um tempinho para fazer o exercício com seu filho(a)!"
+  },
+  "LW": {
+    "nome": "Let's Write",
+    "instrucao": "Dear family! Nesta parte, copiamos nas linhas as palavras escritas acima. Para acompanhar em casa, podem pedir ao seu filho(a) para repetir estas palavras novamente com ajuda do áudio disponível no Portal do Aluno!",
+    "portal": true
+  },
+  "ITCYWS": {
+    "nome": "It Is Time to Create Your Own Story",
+    "instrucao": "Dear family! Nesta parte, fazemos uma frase ou uma pequena história com base na história que lemos na página anterior. Para acompanhar em casa, peçam para seu filho(a) contar uma história para a família!"
   }
 }
