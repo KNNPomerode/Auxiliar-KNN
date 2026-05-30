@@ -172,7 +172,7 @@ export default function Content() {
                     {activity.nome}
                   </h2>
                 </div>
-                <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                <p className="text-slate-600 leading-relaxed text-sm md:text-base whitespace-pre-line">
                   {activity.instrucao}
                 </p>
                 {activity.portal && (
